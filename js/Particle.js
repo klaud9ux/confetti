@@ -31,6 +31,7 @@ export default class Particle {
     this.shape = this.shapes[
       Math.floor(randomNumBetween(0, this.shapes.length))
     ]
+    
   }
   update(){
     this.vy += this.gravity
@@ -72,7 +73,6 @@ export default class Particle {
     ctx.translate(this.x + this.width * 1.2, this.y + this.height * 1.2)
     ctx.rotate(Math.PI / 180 * this.rotation)
     ctx.translate(-this.x - this.width * 1.2, -this.y - this.height * 1.2)
-
 
     ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity})`
 
